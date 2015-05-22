@@ -17,7 +17,7 @@ install:
  - git clone -b master https://github.com/scottdarch/Arturo.git
  - cd Arturo && sudo make install && cd ../
  - pwd
- - ano --board-model $BOARD
+ - ano init --board-model $BOARD
 
 script:
  - ano --help
