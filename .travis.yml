@@ -27,4 +27,4 @@ install:
 
 script:
  - ano --help
- - cd blink && ano build --board-model $BOARD
+ - cd blink && ano build -m $BOARD
