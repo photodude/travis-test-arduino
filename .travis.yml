@@ -1,6 +1,13 @@
 language: cpp
+
 compiler:
  - gcc
+
+env:
+ # We'll test two boards against a single library example, but you could add more combinations
+ # https://github.com/arduino/Arduino/blob/master/build/shared/manpage.adoc
+ - BOARD = uno
+ - BOARD = mega
 
 install:
  - wget http://downloads-02.arduino.cc/arduino-1.6.1-linux64.tar.xz
@@ -20,4 +27,4 @@ install:
 
 script:
  - ano --help
- - cd blink && ano build --board-model uno
+ - cd blink && ano build --board-model $BOARD
